@@ -16,7 +16,8 @@ namespace QuickBuy.Dominio.Entidades
 
         public override void Validate()
         {
-            throw new NotImplementedException();
+            if (Preco == 0)
+                AdicionarCritica("O preço do produto não é valido");
         }
     }
 }
